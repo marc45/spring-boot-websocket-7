@@ -7,3 +7,5 @@ build
 node_modules
 client/dist
 .DS_Store
+src/main/resources/public/
+*.log

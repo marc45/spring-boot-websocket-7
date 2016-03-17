@@ -19,3 +19,12 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 }
+
+task syncClientFilesWithBuild(type: org.gradle.api.tasks.Sync, dependsOn: [":client:build"]) {
+    from 'client/dist'
+    into 'src/main/resources/public'
+}
+
+processResources.dependsOn {
+    'syncClientFilesWithBuild'
+}
