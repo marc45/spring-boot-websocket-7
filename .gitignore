@@ -4,3 +4,6 @@ build
 *.iml
 *.ipr
 .DS_Store
+node_modules
+client/dist
+.DS_Store
