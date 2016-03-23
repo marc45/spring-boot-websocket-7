@@ -15,7 +15,10 @@ repositories {
 }
 
 dependencies {
+
     compile 'org.springframework.boot:spring-boot-starter-websocket'
+    compile 'org.springframework.data:spring-data-mongodb:1.8.4.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-web'
 
     testCompile 'junit:junit:4.12'
 }

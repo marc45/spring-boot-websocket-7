@@ -1,4 +1,5 @@
 
 task build(type: Exec) {
     commandLine 'npm', 'run', 'build'
+    commandLine 'cmd', '/c', 'npm', 'run', 'build'
 }
