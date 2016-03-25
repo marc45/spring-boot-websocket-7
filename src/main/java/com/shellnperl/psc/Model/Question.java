@@ -1,6 +1,7 @@
 package com.shellnperl.psc.Model;
 import org.springframework.data.annotation.Id;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -13,10 +14,19 @@ public class Question {
 
     private String question;
 
-    private String[] options = new String[4];
+    private ArrayList options = new ArrayList(4);
 
     private int rightOption;
 
+    private ArrayList Categories = new ArrayList();
+
+    public ArrayList getCategories() {
+        return Categories;
+    }
+
+    public void setCategories(ArrayList categories) {
+        Categories = categories;
+    }
 
     public String getId() {
         return id;
@@ -26,7 +36,7 @@ public class Question {
         return question;
     }
 
-    public String[] getOptions() {
+    public ArrayList getOptions() {
         return options;
     }
 
@@ -42,7 +52,7 @@ public class Question {
         this.question = question;
     }
 
-    public void setOptions(String[] options) {
+    public void setOptions(ArrayList options) {
         this.options = options;
     }
 
@@ -51,15 +61,15 @@ public class Question {
     }
 
 
-    public Question(String id, String question, String[] options, int rightOption) {
+    public Question(String id, String question, ArrayList options, int rightOption, ArrayList categories) {
         this.id = id;
         this.question = question;
         this.options = options;
         this.rightOption = rightOption;
+        Categories = categories;
     }
 
     public Question(){}
-
 
 
     @Override
@@ -67,8 +77,9 @@ public class Question {
         return "Question{" +
                 "id='" + id + '\'' +
                 ", question='" + question + '\'' +
-                ", options=" + Arrays.toString(options) +
+                ", options=" + options +
                 ", rightOption=" + rightOption +
+                ", Categories=" + Categories +
                 '}';
     }
 }
