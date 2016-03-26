@@ -3,7 +3,6 @@ package com.shellnperl.psc.Controller;
 import com.shellnperl.psc.Model.Question;
 import com.shellnperl.psc.Service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,4 +27,6 @@ public class QuizController {
     public List<Question> randomQuiz(){
         return questionService.randomQuiz();
     }
+
+
 }
