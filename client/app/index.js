@@ -1,27 +1,8 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var APP = require('./components/AppComponent');
+import React from 'react';
+import { render } from 'react-dom';
+import App from './containers/App';
 
-ReactDOM.render(
-  <APP />,
+render (
+  <App />,
   document.getElementById('example')
 );
-
-//var SockJS = require("sockjs-client");
-//
-//var socket = new SockJS("/sample");
-//
-//socket.onopen = function() {
-//    console.log('open');
-//    socket.send('test');
-//    socket.close();
-//};
-//
-//socket.onmessage = function(e) {
-//    console.log('message', e.data);
-//};
-//
-//socket.onclose = function() {
-//    console.log('close');
-//};
-
