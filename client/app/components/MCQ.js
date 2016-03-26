@@ -5,7 +5,7 @@ export default class MCQ extends Component {
         return (
          <div>
             <h3> { this.props.question } </h3>
-            <div> { this.props.children } </div>
+            <div className="list-group"> { this.props.children } </div>
          </div>
         )
     }
